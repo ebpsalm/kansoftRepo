@@ -1,13 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&family=Nunito&display=swap');
+:root {
+  scroll-behavior: smooth;
+  --mainWhite: #fff;
+  --greyMin: #fafafa;
+  --grey300: #ebebeb;
+  --baseGrey: rgb(143, 141, 141);
+  --greymax: #141414;
+  --blueMin: #e6e6ff;
+  --blue200: #9999ff;
+  --blue400: #4d4dff;
+  --blueBase: #0000ff;
+  --blue600: #0000b3;
+  --blue800: #000066;
+  --blueMax: #000019;
+  --redMin: #ffe6e6;
+  --red200: #ff9999;
+  --red400: #ff4d4d;
+  --redBase: #ff0000;
+  --red600: #b30000;
+  --red800: #660000;
+  --redMax: #190000;
+  --mainTransition: all 0.5s ease-in-out;
+}
 body {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  background: var(--greyMin);
+  color: var(--greymax);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Balsamiq Sans', cursive;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+.btn {
+  transition: var(--mainTransition);
+  border: none;
+  background: transparent;
+}
+.btn:hover {
+  cursor: pointer;
+}
+img {
+  width: 100%;
+  display: block;
+}
+/* ----nav---- */
+nav {
+  display: grid;
+  grid-template-columns: repeat(2, 30% 60%);
+  padding: 0 10px;
+  align-items: center;
+  max-height: 80px;
+  position: relative;
+}
+.logo-container {
+  max-width: 10rem;
+}
+.links {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+}
+nav .btn {
+  visibility: hidden;
+}
+/* ------end of nav------ */
+/* ------banner------- */
+.background {
+  background: linear-gradient(
+      rgba(143, 141, 141, 0.5),
+      rgba(143, 141, 141, 0.5)
+    ),
+    url('./img/bcg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner {
+  background: var(--blue400);
+  text-align: center;
+  color: var(--mainWhite);
+  padding: 1rem 1.5rem;
+  width: 80%;
+  text-transform: capitalize;
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.banner .btn {
+  font-size: 1.7rem;
+  border: 3px solid var(--redMax);
+  padding: 3px 1.3rem;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 8rem;
+  margin: 0 auto;
+}
+.underline::after {
+  content: '';
+  display: block;
+  width: 50%;
+  background: var(--grey300);
+  height: 5px;
+  border-radius: 20px;
+  margin: 5px auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ------end of banner------- */
+/* ------services------- */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1.5rem;
+  width: 90vw;
+  margin: auto;
+  text-align: center;
+}
+.services-container .icon {
+  font-size: 2rem;
+  color: var(--blueMax);
+}
+.services .underline::after {
+  color: #190000;
+}
+/* ------ end ofservices------- */
+
+/* ------ featured------- */
+.featured-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-gap: 1.5rem;
+  width: 90vw;
+  margin: auto;
+}
+.featured-item {
+  background: var(--grey300);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.featured-footer h6 {
+  font-size: 15px;
+}
+.featured-footer p {
+  text-transform: capitalize;
+}
+/* ------end of featured------- */
+
+@media screen and (max-width: 600px) {
+  nav .btn {
+    visibility: visible;
+  }
+
+  nav {
+    align-items: flex-start;
+    grid-template-columns: repeat(2, 40% 50% 1fr);
+  }
+  .links {
+    flex-direction: column;
+    padding: 2rem;
+    background: red;
+    gap: 1.5rem;
+    margin: 0;
+  }
+  .links-container {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    transform: translateX(100%);
+  }
+  .show-links-container {
+    transform: translateX(25%);
+  }
+  .links-container .btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    align-self: flex-start;
+    font-size: 25px;
+  }
+  nav > .btn {
+    font-size: 25px;
+    display: inline-block;
+    position: absolute;
+    top: 30%;
+    right: 1rem;
+    z-index: -1;
+  }
 }
