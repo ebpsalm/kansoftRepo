@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 import { useState } from 'react';
 import history from '../img/history.jpg';
-// import goals from '../img/goals.jpg';
+import goals from '../img/goals .png';
 import employees from '../img/employees.jpg';
 
 const About = () => {

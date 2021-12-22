@@ -75,7 +75,7 @@ const Checkout = () => {
               placeholder='credit card number'
             />
           </div>
-          <button className='btn'>{`pay $${total}`}</button>
+          <button className='btn checkout-btn'>{`pay $${total}`}</button>
         </form>
       )}
 

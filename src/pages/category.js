@@ -5,8 +5,7 @@ import useGlobalContext from '../context';
 import { useParams } from 'react-router-dom';
 import Title from '../components/Title';
 import { FaShoppingCart } from 'react-icons/fa';
-import Footer from '../components/Footer'
-
+import Footer from '../components/Footer';
 
 const Category = () => {
   const { data, addToCart } = useGlobalContext();
@@ -27,7 +26,7 @@ const Category = () => {
       <Title
         title={type !== 'all' ? ` ${displayedType} in store` : 'store'}
       ></Title>
-      <div className='featured-products'>
+      <div className='featured-products margin'>
         {display.map((item) => {
           return (
             <article key={item.id} className='featured-item'>
@@ -45,7 +44,7 @@ const Category = () => {
           );
         })}
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };
