@@ -7,6 +7,7 @@ import { GiAutoRepair, GiSpiderWeb } from 'react-icons/gi';
 import { FaWindows } from 'react-icons/fa';
 import { MdOutlineSell } from 'react-icons/md';
 import useGlobalContext from '../context';
+import Footer from '../components/Footer';
 const Home = () => {
   const { data } = useGlobalContext();
   const featured = data.filter((item) => item.isFeatured);
@@ -80,6 +81,7 @@ const Home = () => {
           );
         })}
       </div>
+      <Footer />
     </>
   );
 };

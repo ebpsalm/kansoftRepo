@@ -126,7 +126,9 @@ nav .btn {
   border-radius: 20px;
   margin: 5px auto;
 }
-
+.underline {
+  margin: 2rem 0;
+}
 /* ------end of banner------- */
 /* ------services------- */
 .services-container {
@@ -149,7 +151,7 @@ nav .btn {
 /* ------ featured------- */
 .featured-products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 1.5rem;
   width: 90vw;
   margin: auto;
@@ -165,7 +167,161 @@ nav .btn {
 .featured-footer p {
   text-transform: capitalize;
 }
+
 /* ------end of featured------- */
+/* ------store------- */
+.featured-footer2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.featured-img {
+  position: relative;
+  overflow-x: hidden;
+}
+.featured-img .btn {
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: var(--blueMax);
+  color: var(--red400);
+  padding: 3px 10px;
+  border-top-left-radius: 15px;
+  transform: translateX(110%);
+}
+.featured-img:hover .btn {
+  transform: translateX(0);
+}
+/* ------end of store------- */
+/* ------checkout------- */
+.featured-products.checkout {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.checkout .featured-footer {
+  padding: 5px;
+  text-align: left;
+  display: inline-block;
+}
+.checkout .featured-footer > p > span {
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+.checkout h6,
+.checkout p {
+  text-align: left;
+  margin: 10px 5px;
+}
+/* ------end of checkout------- */
+/* ------checkout form------- */
+.checkout-form {
+  width: 90%;
+  max-width: 700px;
+  padding: 10px;
+  margin: 1.5rem auto;
+  background: var(--blue200);
+  position: relative;
+}
+.checkout-form h4 {
+  text-align: left;
+}
+.checkout-form input {
+  display: block;
+  width: 70%;
+  min-width: 5rem;
+  border: none;
+  background: var(--grey300);
+  height: 1.5rem;
+}
+.field {
+  text-transform: capitalize;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.checkout-form .btn {
+  font-size: 1rem;
+  padding: 3px 10px;
+  text-transform: capitalize;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  background: var(--blueMax);
+  color: var(--mainWhite);
+  border-radius: 5px;
+}
+/* ------end of checkout form------- */
+
+/* ------footer------- */
+.footer {
+  text-align: center;
+  background: var(--red200);
+  padding: 1.5rem 0.5rem;
+}
+.footer .icons-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.copyright {
+  text-transform: capitalize;
+}
+.icons-container .btn {
+  font-size: 1.3rem;
+  color: #000066;
+}
+.copyright span {
+  text-transform: uppercase;
+}
+/* ------end of footer------- */
+/* ------about------- */
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr, 1fr);
+  width: 90%;
+  margin: 2rem auto;
+  background: var(--blue200);
+}
+.tabs {
+  background: var(--grey300);
+  padding: 0;
+}
+.tabs h2 {
+  margin: 0;
+  padding: 10px 1rem;
+}
+
+.tabs-header {
+  display: flex;
+}
+.tabs-body p {
+  display: none;
+  margin: 0;
+  padding: 10px;
+}
+.tabs-body p span {
+  font-size: 1.3rem;
+  display: block;
+  font-family: 'Balsamiq Sans', cursive;
+  text-transform: capitalize;
+  margin: 5px;
+}
+.active {
+  background: var(--mainWhite);
+  display: inline-block;
+}
+.tabs-body p.active {
+  display: inline-block;
+}
+.tabs-body {
+  /* background: var(--mainWhite); */
+  margin: 0;
+  padding: 0;
+}
+.tabs-header h2 {
+  flex-grow: 1;
+}
+/* ------emd of about------- */
 
 @media screen and (max-width: 600px) {
   nav .btn {
